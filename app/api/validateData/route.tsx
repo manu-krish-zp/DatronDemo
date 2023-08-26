@@ -34,6 +34,6 @@ export async function POST(request: Request) {
 
     return NextResponse.json({ body: JSON.stringify(res) }, { status: 200 });
   } catch (e) {
-    return NextResponse.json({ body: "Error" }, { status: 400 });
+    return NextResponse.json({ body: e}, { status: 400 });
   }
 }
