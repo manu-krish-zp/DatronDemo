@@ -1,0 +1,6 @@
+html,body {
+  margin: 0;
+  height: 100%;
+  position: relative;
+  /* background-image: url('../public/images/inner5_back.png'); */
+}
