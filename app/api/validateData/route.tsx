@@ -20,9 +20,9 @@ export async function POST(request: Request) {
   require("dotenv").config();
   const data: FileType = await request.json();
   try {
-    const client: MongoClient = new MongoClient(process.env.DB_CONN_STRING!);
+    const client: MongoClient = new MongoClient(process.env.NEXT_PUBLIC_DB_CONN_STRING!);
     await client.connect();
-    const db: Db = client.db(process.env.DB_NAME);
+    const db: Db = client.db(process.env.NEXT_PUBLIC_DB_NAME);
     const fileCollection: Collection = db.collection("data.csv");
     // const res = await fileCollection.insertOne(data);
     const res = await fileCollection.findOne({fileName: "data.csv"})
