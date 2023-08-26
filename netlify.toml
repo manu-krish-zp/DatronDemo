@@ -1,0 +1,4 @@
+[[redirects]]
+  from = "/"
+  to = "/demo"
+  force = true
