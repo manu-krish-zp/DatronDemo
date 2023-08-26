@@ -28,8 +28,6 @@ const Page = () => {
   const cancel = () => {
     setData(null);
   };
-  console.log(process.env.NEXT_PUBLIC_DB_CONN_STRING!)
-  console.log(process.env.NEXT_PUBLIC_DB_NAME)
   return (
     <Box>
       {!data && <UploadFiles setData={setData} setStatuses={setStatuses}></UploadFiles>}
